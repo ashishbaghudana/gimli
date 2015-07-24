@@ -278,6 +278,8 @@ public class Corpus {
         try {
             for (int i = 0; i < size(); i++) {
                 s = getSentence(i);
+                if (s.getId()==null)
+                    s.setId("");
                 out.write(s.getId().getBytes());
                 out.write("\n".getBytes());
 
